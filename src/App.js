@@ -21,7 +21,7 @@ class App extends Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-3">
-            <img src={logo} className="img-thumbnail logo" alt="netflix" />
+            <img src={logo} className="img-thumbnail logo bg-transparent border-0" alt="netflix" />
           </div>
         </div>
         <div className="row">
