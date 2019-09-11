@@ -1,22 +1,22 @@
 .btn {
-    display: none
-  }
-  
-  .img-container {
-    position: relative;
-  }
-  
-  .img-container .btn {
-    position: absolute;
-    top: 90%;
-    left: 55%;
-    transform: translate(-70%,-50%);
-  }
-  
-  .img-container:hover .btn {
-    display: block;
-  }
+  display: none
+}
 
-  .img-container:hover img{
-    opacity: 0.6;
-  }
+.img-container {
+  position: relative;
+}
+
+.img-container .btn {
+  position: absolute;
+  top: 90%;
+  left: 55%;
+  transform: translate(-70%, -50%);
+}
+
+.img-container:hover .btn {
+  display: block;
+}
+
+.img-container:hover img {
+  opacity: 0.6;
+}

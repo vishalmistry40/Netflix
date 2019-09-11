@@ -8,13 +8,13 @@
 
 .img-container .btn {
   position: absolute;
-  transform: translate(-80%,-60%);
+  transform: translate(-80%, -60%);
 }
 
 .img-container:hover .btn {
   display: block
-
 }
-.img-container:hover img{
+
+.img-container:hover img {
   opacity: 0.6;
 }
