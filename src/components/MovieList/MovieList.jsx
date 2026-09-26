@@ -1,4 +1,5 @@
 import React from "react";
+import { posterFor } from "../../posters";
 
 export default function MovieList({
   title,
@@ -17,9 +18,9 @@ export default function MovieList({
               <h5 className="text-center text-white">{item.title}</h5>
               <div className="img-container">
                 <img
-                  src={item.img}
+                  src={posterFor(item)}
                   className="rounded mx-auto d-block my-3"
-                  alt={item.title}
+                  alt={`Demo poster for ${item.title}`}
                 />
                 <button
                   className={`btn ${buttonClassname} mx-auto`}

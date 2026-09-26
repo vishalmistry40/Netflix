@@ -1,4 +1,3 @@
-import axios from "axios";
 import { 
   SET_APP_DATA, 
   ADD_TO_MYLIST,
@@ -21,8 +20,9 @@ export const removeFromMyList = payload => ({
 export function fetchData() {
   return async function(dispatch) {
     try {
-      const response = await axios.get("./data.json");
-      dispatch(setAppData(response.data));
+      const response = await fetch(`${import.meta.env.BASE_URL}data.json`);
+      if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
+      dispatch(setAppData(await response.json()));
     } catch (error) {
       console.error(error);
     }
