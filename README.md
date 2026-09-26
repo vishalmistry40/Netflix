@@ -66,3 +66,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## 2026 maintenance
+
+This tutorial-sized movie-list app has been migrated from Create React App 3 to Vite and updated React/Redux dependencies. It uses the original local `public/data.json` sample. The old third-party HTTP movie posters no longer loaded reliably, so the app displays generated local demo posters instead. This is not affiliated with Netflix and contains no licensed film art.
+
+```sh
+npm ci
+npm test
+npm run build
+npm run dev
+```
+
+`npm audit` checks the current direct/transitive package tree. The app does not have a backend; the old package listed server dependencies that were never imported by its source, so they were removed. The prior React test was broken because it rendered a Redux-connected component outside a Provider; the new interaction test supplies a store and checks adding a movie.
